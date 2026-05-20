@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Web Runner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Mobile Web Runner</h1>
+    <p class="subtitle">Open websites inside a mobile-friendly runner.</p>
+
+    <form id="runnerForm" class="toolbar">
+      <input id="urlInput" type="url" placeholder="https://example.com" required />
+      <button type="submit">Run</button>
+      <button type="button" id="backBtn">Back</button>
+      <button type="button" id="forwardBtn">Forward</button>
+      <button type="button" id="reloadBtn">Reload</button>
+      <button type="button" id="openBtn">Open Tab</button>
+      <button type="button" id="copyBtn">Copy URL</button>
+    </form>
+
+    <p class="hint">Some sites block iframe embedding (X-Frame-Options/CSP). If blocked, use Open Tab.</p>
+
+    <section class="viewer">
+      <iframe id="webFrame" title="Web Runner" sandbox="allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
